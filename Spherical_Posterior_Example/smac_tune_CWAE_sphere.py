@@ -189,8 +189,8 @@ def cwae_target(config, seed: int = 0) -> float:
         loss = 0
         # Subsample particles for W2 estimation to keep evaluation fast.
         n_sample = int(1e3)
-
-        X_val = CWAE3(Y_True, X0, A_torch, h, t, Noise, params) # choose CWAE1, CWAE2, or CWAE3 as the validation model 
+        # CWAE1, CWAE2, or CWAE3 can be selected here.
+        X_val = CWAE1(Y_True, X0, A_torch, h, t, Noise, params) 
         for sim in range(X_val.shape[0]):
             loss += w2_distance(X_val[sim,-1,:,:n_sample].T, X_True[:,:n_sample].T)
         # Average W2 loss across independent simulations.
