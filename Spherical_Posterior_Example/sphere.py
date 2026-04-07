@@ -79,6 +79,7 @@ for ii in [1, 2]:
     X1 = np.random.randn(N_true, L).T
     Y1 = (X1*X1).sum(axis=0, keepdims=True) + gamma * np.random.randn(N_true, dy).T
 
+    # Sequential importance resampling to approximate the true posterior distribution given the observation Y_True.
     rng = np.random.default_rng()
     # Compute unnormalized log-weights from the Gaussian observation likelihood.
     W = np.sum((Y_True[0, -1] - Y1) * (Y_True[0, -1] - Y1), axis=0) / (2 * gamma * gamma)
