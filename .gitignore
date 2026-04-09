@@ -1,0 +1,17 @@
+*.pth
+.venv
+venv
+__pycache__
+data
+frames
+.vscode
+*.npy
+test.py
+test2.py
+gifs
+videos
+*.csv
+*.pdf
+*.png
+*.txt
+*.npz
