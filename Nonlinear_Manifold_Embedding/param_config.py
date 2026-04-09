@@ -83,7 +83,7 @@ CWAE3_VALUES = {
 # here so the filter code never needs to know the encoding convention.
 
 def get_cwae1_parameters(N, latent_dims):
-    values = CWAE1_VALUES["large"]
+    values = CWAE1_VALUES
 
     nns_ = [values[f"nns{i}"] for i in range(1, 6)]
     nbs_ = [values[f"nbs{i}"] for i in range(1, 6)]
@@ -104,7 +104,7 @@ def get_cwae1_parameters(N, latent_dims):
     return parameters_CWAE
 
 def get_cwae2_parameters(N, latent_dims):
-    values = CWAE2_VALUES["large"]
+    values = CWAE2_VALUES
 
     nns_ = [values[f"nns{i}"] for i in range(1, 6)]
     nbs_ = [values[f"nbs{i}"] for i in range(1, 6)]
@@ -125,7 +125,7 @@ def get_cwae2_parameters(N, latent_dims):
     return parameters_CWAE
 
 def get_cwae3_parameters(N, latent_dims):
-    values = CWAE3_VALUES["large"]
+    values = CWAE3_VALUES
 
     nns_ = [values[f"nns{i}"] for i in range(1, 6)]
     nbs_ = [values[f"nbs{i}"] for i in range(1, 6)]
