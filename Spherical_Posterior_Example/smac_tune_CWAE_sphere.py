@@ -199,7 +199,7 @@ def cwae_target(config, seed: int = 0) -> float:
         print(f"[SMAC] Trial failed: {e}")
         loss = 1e6          # penalise failed runs
 
-    print(f"[SMAC] config={dict(config)}  MMD={loss:.6f}")
+    print(f"[SMAC] config={dict(config)}  W2={loss:.6f}")
     return loss
 
 
